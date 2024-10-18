@@ -1,0 +1,10 @@
+module full_adder (
+    input A,     // 加数
+    input B,     // 被加数
+    input Cin,   // 进位输入
+    output Sum,  // 和
+    output Cout  // 进位输出
+);
+    assign Sum = A ^ B ^ Cin;  // 和
+    assign Cout = (A & B) | (B & Cin) | (A & Cin);  // 进位输出
+endmodule
